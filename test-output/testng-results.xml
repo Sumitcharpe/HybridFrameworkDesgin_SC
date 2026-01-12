@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="5" passed="4" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-10-03T19:59:40 IST" name="Suite" finished-at="2023-10-03T20:00:12 IST" duration-ms="32731">
+    <groups>
+    </groups>
+    <test started-at="2023-10-03T19:59:40 IST" name="LoginFeature" finished-at="2023-10-03T19:59:50 IST" duration-ms="10081">
+      <class name="DesignFramework.TestCases.SignUp">
+        <test-method is-config="true" signature="intinilizeDriver()[pri:0, instance:DesignFramework.TestCases.SignUp@5812f68b]" started-at="2023-10-03T19:59:40 IST" name="intinilizeDriver" finished-at="2023-10-03T19:59:48 IST" duration-ms="8357" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intinilizeDriver -->
+        <test-method signature="resgistrationForm()[pri:0, instance:DesignFramework.TestCases.SignUp@5812f68b]" started-at="2023-10-03T19:59:48 IST" name="resgistrationForm" finished-at="2023-10-03T19:59:50 IST" duration-ms="1532" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resgistrationForm -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:DesignFramework.TestCases.SignUp@5812f68b]" started-at="2023-10-03T19:59:50 IST" name="closeBrowser" finished-at="2023-10-03T19:59:50 IST" duration-ms="145" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- DesignFramework.TestCases.SignUp -->
+    </test> <!-- LoginFeature -->
+    <test started-at="2023-10-03T19:59:40 IST" name="SignUP Feature" finished-at="2023-10-03T20:00:12 IST" duration-ms="32731">
+      <class name="DesignFramework.TestCases.LoginTest">
+        <test-method is-config="true" signature="intinilizeDriver()[pri:0, instance:DesignFramework.TestCases.LoginTest@6d1ef78d]" started-at="2023-10-03T19:59:40 IST" name="intinilizeDriver" finished-at="2023-10-03T19:59:49 IST" duration-ms="8620" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intinilizeDriver -->
+        <test-method signature="loginWithInvalidCred(java.util.HashMap)[pri:0, instance:DesignFramework.TestCases.LoginTest@6d1ef78d]" started-at="2023-10-03T19:59:49 IST" name="loginWithInvalidCred" data-provider="getData" finished-at="2023-10-03T19:59:49 IST" duration-ms="511" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=test, username=test}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithInvalidCred -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:DesignFramework.TestCases.LoginTest@6d1ef78d]" started-at="2023-10-03T19:59:49 IST" name="closeBrowser" finished-at="2023-10-03T19:59:49 IST" duration-ms="86" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="intinilizeDriver()[pri:0, instance:DesignFramework.TestCases.LoginTest@6d1ef78d]" started-at="2023-10-03T19:59:49 IST" name="intinilizeDriver" finished-at="2023-10-03T19:59:54 IST" duration-ms="4286" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intinilizeDriver -->
+        <test-method signature="loginWithInvalidCred(java.util.HashMap)[pri:0, instance:DesignFramework.TestCases.LoginTest@6d1ef78d]" started-at="2023-10-03T19:59:54 IST" name="loginWithInvalidCred" data-provider="getData" finished-at="2023-10-03T19:59:54 IST" duration-ms="615" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=test2, username=test1}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithInvalidCred -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:DesignFramework.TestCases.LoginTest@6d1ef78d]" started-at="2023-10-03T19:59:54 IST" name="closeBrowser" finished-at="2023-10-03T19:59:54 IST" duration-ms="73" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="intinilizeDriver()[pri:0, instance:DesignFramework.TestCases.LoginTest@6d1ef78d]" started-at="2023-10-03T19:59:54 IST" name="intinilizeDriver" finished-at="2023-10-03T20:00:01 IST" duration-ms="6849" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intinilizeDriver -->
+        <test-method signature="loginWithUserName()[pri:0, instance:DesignFramework.TestCases.LoginTest@6d1ef78d]" started-at="2023-10-03T20:00:01 IST" name="loginWithUserName" finished-at="2023-10-03T20:00:07 IST" duration-ms="5739" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//p[text()='The username and password could not be verified.']"}
+  (Session info: chrome=117.0.5938.132)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.9.1', revision: 'eb2032df7f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [170e2b9bfa2384edf3b52553eb608049, findElement {using=xpath, value=//p[text()='The username and password could not be verified.']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 117.0.5938.92 (67649b10b92b..., userDataDir: D:\Users\Sumit_Charpe\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56468}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56468/devtoo..., se:cdpVersion: 117.0.5938.132, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 170e2b9bfa2384edf3b52553eb608049]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//p[text()='The username and password could not be verified.']"}
+  (Session info: chrome=117.0.5938.132)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.9.1', revision: 'eb2032df7f'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [170e2b9bfa2384edf3b52553eb608049, findElement {using=xpath, value=//p[text()='The username and password could not be verified.']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 117.0.5938.92 (67649b10b92b..., userDataDir: D:\Users\Sumit_Charpe\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56468}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56468/devtoo..., se:cdpVersion: 117.0.5938.132, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 170e2b9bfa2384edf3b52553eb608049
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+at DesginFramwork.abstractAction.AbstractAction.verifyErrorMessage(AbstractAction.java:39)
+at DesignFramework.TestCases.LoginTest.loginWithUserName(LoginTest.java:48)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithUserName -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:DesignFramework.TestCases.LoginTest@6d1ef78d]" started-at="2023-10-03T20:00:07 IST" name="closeBrowser" finished-at="2023-10-03T20:00:07 IST" duration-ms="199" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="intinilizeDriver()[pri:0, instance:DesignFramework.TestCases.LoginTest@6d1ef78d]" started-at="2023-10-03T20:00:07 IST" name="intinilizeDriver" finished-at="2023-10-03T20:00:12 IST" duration-ms="4602" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- intinilizeDriver -->
+        <test-method signature="noUserNameAndPassword()[pri:0, instance:DesignFramework.TestCases.LoginTest@6d1ef78d]" started-at="2023-10-03T20:00:12 IST" name="noUserNameAndPassword" finished-at="2023-10-03T20:00:12 IST" duration-ms="595" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- noUserNameAndPassword -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:DesignFramework.TestCases.LoginTest@6d1ef78d]" started-at="2023-10-03T20:00:12 IST" name="closeBrowser" finished-at="2023-10-03T20:00:12 IST" duration-ms="92" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- DesignFramework.TestCases.LoginTest -->
+    </test> <!-- SignUP Feature -->
+  </suite> <!-- Suite -->
+</testng-results>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Suite">
+	
+	<listeners> 
+		<listener class-name="DesginFramework.TestComponent.Listners"></listener>
+	 </listeners>
+		
+	
+  <test thread-count="5" name="LoginFeature">
+	  
+    <classes>
+      <class name="DesignFramework.TestCases.SignUp"/>
+    </classes>
+      </test>
+      
+      <test thread-count="5" name="SignUP Feature">
+		  <classes>
+      <class name="DesignFramework.TestCases.LoginTest"/>
+    </classes>
+    </test>
+  <!-- Test -->
+</suite> <!-- Suite -->
