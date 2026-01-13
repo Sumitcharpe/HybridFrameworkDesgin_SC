@@ -52,7 +52,7 @@ public class Listners extends Baseclass implements ITestListener {
 		}
 		
 		
-		test.addScreenCaptureFromPath(filePath ,result.getMethod().getMethodName());
+		//test.addScreenCaptureFromPath(filePath ,result.getMethod().getMethodName());
 		
 	}
 
