@@ -1,5 +1,6 @@
 package DesignFramework.TestCases;
 
+import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.HashMap;
@@ -55,12 +56,16 @@ public class LoginTest extends Baseclass {
 		register = login.loginApplication("", "");
 		register.verifyErrorMessage("Please enter a username and password.", "Please enter a username and password.");
 	}
+
 	
 	
 	
 	@DataProvider
 	public Object[][] getData() throws IOException {
-		List<HashMap<String ,String>> data= getJsonData(System.getProperty("user.dir") +"\\src\\test\\java\\DesginFramework\\TestData\\data.json");
+		
+		//List<HashMap<String ,String>> data= getJsonData(System.getProperty("user.dir") +"\\src\\test\\java\\DesginFramework\\TestData\\data.json");
+		List<HashMap<String ,String>> data= getJsonData(System.getProperty("user.dir") + File.separator + "data.json");
+		
 		 //return new Object[][] {{"test","test"},{"test1","test1"}};
 		return new Object[][] {{data.get(0)},{data.get(1)}};
 		
