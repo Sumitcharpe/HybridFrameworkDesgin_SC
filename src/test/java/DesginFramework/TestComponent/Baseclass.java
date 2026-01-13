@@ -33,7 +33,7 @@ public class Baseclass {
 		prop = new Properties();
 
 		FileInputStream file = new FileInputStream(
-				System.getProperty("user.dir") + "\\src\\main\\java\\DesignFramework\\resources\\Global.properties");
+				System.getProperty("user.dir") + File.separator+"Global.properties");
 
 		prop.load(file);
 
