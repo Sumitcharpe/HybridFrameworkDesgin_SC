@@ -21,8 +21,12 @@ jobs:
           distribution: 'temurin'
           java-version: '8'
           cache: maven
-      - name: Run Maven Tests
-        run: mvn clean test
+
+      - name: Verify Java Version
+        run: |
+          java -version
+          javac -version
+          mvn -version
 
       - name: Run Maven Tests
         run: mvn clean test
