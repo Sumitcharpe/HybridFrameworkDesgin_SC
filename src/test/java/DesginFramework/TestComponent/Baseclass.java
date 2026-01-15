@@ -34,13 +34,13 @@ public class Baseclass {
 		prop = new Properties();
 
 		FileInputStream file = new FileInputStream(
-			System.getProperty("user.dir")
-			+ File.separator + "src"
-			+ File.separator + "main"
-			+ File.separator + "java"
-			+ File.separator + "DesignFramework"
-			+ File.separator + "resources"
-			+ File.separator + "Global.properties");
+				System.getProperty("user.dir")
+						+ File.separator + "src"
+						+ File.separator + "main"
+						+ File.separator + "java"
+						+ File.separator + "DesignFramework"
+						+ File.separator + "resources"
+						+ File.separator + "Global.properties");
 
 		prop.load(file);
 
@@ -66,13 +66,13 @@ public class Baseclass {
 
 	public List<HashMap<String, String>> getJsonData(String filepath) throws IOException {
 
-		String dataJsonPath = System.getProperty("user.dir") 
-		+ File.separator + "src"
-		+ File.separator + "test"
-		+ File.separator + "java"
-		+ File.separator + "DesginFramework"
-		+ File.separator + "TestData"
-		+ File.separator + "data.json";
+		String dataJsonPath = System.getProperty("user.dir")
+				+ File.separator + "src"
+				+ File.separator + "test"
+				+ File.separator + "java"
+				+ File.separator + "DesginFramework"
+				+ File.separator + "TestData"
+				+ File.separator + "data.json";
 
 		File file = new File(dataJsonPath);
 		if (!file.exists()) {
@@ -80,10 +80,6 @@ public class Baseclass {
 		}
 		String jsonfile = FileUtils.readFileToString(file, StandardCharsets.UTF_8);
 		ObjectMapper mapper = new ObjectMapper();
-
-		// String jsonfile =FileUtils.readFileToString(new File (filepath),
-		// StandardCharsets.UTF_8);
-		// ObjectMapper mapper = new ObjectMapper();
 
 		List<HashMap<String, String>> data = mapper.readValue(jsonfile,
 				new TypeReference<List<HashMap<String, String>>>() {
