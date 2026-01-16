@@ -43,16 +43,20 @@ public class Listners extends Baseclass implements ITestListener {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		} 
-		String filePath = null;
-		try {
-			 filePath =captureScreenShot(result.getMethod().getMethodName(),driver);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		
+		if (driver != null) {
+			String filePath = null;
+			try {
+				filePath = captureScreenShot(result.getMethod().getMethodName(), driver);
+				if (filePath != null && !filePath.isEmpty()) {
+					test.addScreenCaptureFromPath(filePath, result.getMethod().getMethodName());
+				}
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+				test.info("Failed to capture screenshot: " + e.getMessage());
+			}
 		}
-		
-		
-		//test.addScreenCaptureFromPath(filePath ,result.getMethod().getMethodName());
 		
 	}
 

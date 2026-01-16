@@ -96,10 +96,17 @@ public class Baseclass {
 
 		File sourceFile = ts.getScreenshotAs(OutputType.FILE);
 
-		File DestinationFile = new File(System.getProperty("user.dir") + "//report//" + testCaseName + ".png");
+		// Create report directory if it doesn't exist
+		File reportDir = new File(System.getProperty("user.dir") + File.separator + "report");
+		if (!reportDir.exists()) {
+			reportDir.mkdirs();
+		}
+
+		String screenshotPath = System.getProperty("user.dir") + File.separator + "report" + File.separator + testCaseName + ".png";
+		File DestinationFile = new File(screenshotPath);
 
 		FileUtils.copyFile(sourceFile, DestinationFile);
-		return System.getProperty("user dir") + "//report//" + testCaseName + ".png";
+		return screenshotPath;
 
 	}
 
