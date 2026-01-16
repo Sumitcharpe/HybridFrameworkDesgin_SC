@@ -9,7 +9,7 @@ on:
 
 env:
   SESSION_FILENAME: session.cookies
-  APP_BASE_URL: https://yourapp.example  # CHANGE THIS to your app URL
+  APP_BASE_URL: https://parabank.parasoft.com/parabank/index.html  # CHANGE THIS to your app URL
 
 jobs:
   authenticate: 
