@@ -13,6 +13,12 @@
       <class name="DesignFramework.TestCases.SignUp"/>
     </classes>
       </test>
+
+      <test name="API Tests">
+        <classes>
+            <class name="DesignFramework.TestCases.ApiTest"/>
+        </classes>
+    </test>
       
       <test thread-count="5" name="SignUP Feature">
 		  <classes>

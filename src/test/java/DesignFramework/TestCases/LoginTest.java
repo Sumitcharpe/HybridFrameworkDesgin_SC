@@ -2,14 +2,8 @@ package DesignFramework.TestCases;
 
 import java.io.File;
 import java.io.IOException;
-import java.time.Duration;
 import java.util.HashMap;
 import java.util.List;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -28,16 +22,6 @@ public class LoginTest extends Baseclass {
 	  login = new LoginPage(driver);
 	  
 	  register = login.loginApplication(data.get("username"), data.get("password"));
-	  
-		/*
-		 * if (register.
-		 * verifyErrorMessage("An internal error has occurred and has been logged.",
-		 * "An internal error has occurred and has been logged.")) {
-		 * 
-		 * register.registrationForm();
-		 * 
-		 * }
-		 */
 	  
 	  }
 	 
