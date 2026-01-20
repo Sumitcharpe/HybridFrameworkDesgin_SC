@@ -1,0 +1,91 @@
+name: Hybrid Test Automation
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request: 
+    branches: [ "main" ]
+  workflow_dispatch:
+
+env:
+  SESSION_FILENAME: session.cookies
+  APP_BASE_URL: https://parabank.parasoft.com/parabank/index.html  # CHANGE THIS to your app URL
+
+jobs:
+  authenticate: 
+    name: Create auth session
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Java 17.0.12
+        uses: actions/setup-java@v4
+        with:
+          distribution:  'temurin'
+          java-version: '17.0.12'
+          cache: maven
+
+      - name:  Verify Java Version
+        run: |
+          java -version
+          javac -version
+          mvn -version
+
+      - name: Install dependencies
+        run: mvn -q -DskipTests=true verify
+
+      - name: Generate session (runs a single test that logs in and saves cookies)
+        run: mvn -Dtest=com.example.AuthSessionGenerator#generateSession test -Dsession.file=${{ env.SESSION_FILENAME }}
+        env:
+          CI_TEST_USERNAME: ${{ secrets.CI_TEST_USERNAME }}
+          CI_TEST_PASSWORD: ${{ secrets.CI_TEST_PASSWORD }}
+          APP_BASE_URL: ${{ env.APP_BASE_URL }}
+
+      - name: Upload session artifact
+        uses: actions/upload-artifact@v3
+        with: 
+          name: session-artifact
+          path: ${{ env.SESSION_FILENAME }}
+          retention-days: 1
+
+  test: 
+    name: Run tests (matrix)
+    needs: authenticate
+    runs-on:  ubuntu-latest
+    strategy: 
+      matrix:
+        browser: [chrome, firefox]
+        test-suite: [suite1, suite2]  # optional: split tests into multiple suites
+    steps:
+      - name:  Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Java 17.0.12
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17.0.12'
+          cache: maven
+
+      - name: Verify Java Version
+        run: |
+          java -version
+          javac -version
+          mvn -version
+
+      - name: Download session artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: session-artifact
+          path: . 
+
+      - name: Install dependencies
+        run: mvn -q -DskipTests=true verify
+
+      - name: Run Maven tests (uses session file)
+        env:
+          BROWSER: ${{ matrix.browser }}
+          SESSION_FILE: ${{ env.SESSION_FILENAME }}
+        run: |
+          mvn -Dbrowser=${BROWSER} -Dsession. file=${SESSION_FILE} -Dtest. suite=${{ matrix.test-suite }} test -T 1C
